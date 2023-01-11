@@ -463,3 +463,6 @@ working*
 #Test Coverage Reports
 coverage.cobertura.xml
 Reports/
+/src/TobeDev.FirstProject.Web/tobedev.db-wal
+/src/TobeDev.FirstProject.Web/tobedev.db-shm
+/src/TobeDev.FirstProject.Web/tobedev.db
