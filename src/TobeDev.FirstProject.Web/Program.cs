@@ -15,7 +15,7 @@ namespace TobeDev.FirstProject.Web
             builder.Services.AddDbContext<DatabaseContext>(options =>
             {
                 var connectionString = builder.Configuration.GetConnectionString("DefaultDatabase");
-                options.UseSqlServer(connectionString, sql => sql.EnableRetryOnFailure());
+                options.UseSqlite(connectionString);
                 options.EnableSensitiveDataLogging(false);
                 options.EnableDetailedErrors(false);
             });
