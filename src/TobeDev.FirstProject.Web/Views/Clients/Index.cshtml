@@ -1,0 +1,31 @@
+﻿@using TobeDev.FirstProject.Web.Models.Clients;
+@model ClientListViewModel
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Data Nascimento</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Clients.Any())
+            {
+                foreach (var client in Model.Clients)
+                {
+                    <tr>
+                        <th scope="row">@client.Id</th>
+                        <td>@client.FirstName</td>
+                        <td>@client.LastName</td>
+                        <td>@client.BirthDate</td>
+                        <td><a href="@Url.Action("Client","Clients",new {id = client.Id})" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
