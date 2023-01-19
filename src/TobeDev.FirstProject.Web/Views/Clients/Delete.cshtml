@@ -1,0 +1,11 @@
+﻿@using TobeDev.FirstProject.Web.Models.Clients;
+@model ClientViewModel
+
+Você tem certeza que deseja excluir o cliente @Model.FirstName?
+
+<div class="row">
+    <div class="col-xs-12 col-lg-4">
+        <a class="btn btn-primary btn-sm" href="@Url.Action("ConfirmDelete","Clients",new {id = Model.Id})">Sim</a>
+        <a class="btn btn-secondary btn-sm" href="@Url.Action("Index","Clients")">Cancelar</a>
+    </div>
+</div>

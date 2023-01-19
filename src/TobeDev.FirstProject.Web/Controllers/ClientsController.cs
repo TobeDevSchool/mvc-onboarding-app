@@ -61,6 +61,34 @@ namespace TobeDev.FirstProject.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> Delete(int id)
+        {
+            var clientViewModel = new ClientViewModel();
+
+            var client = await databaseContext.Clients.FirstOrDefaultAsync(c => c.Id == id);
+            if (client != null)
+                clientViewModel = MapClientToViewModel(client);
+
+
+            return View(clientViewModel);
+        }
+
+        public async Task<IActionResult> ConfirmDelete(int id)
+        {
+            var clientViewModel = new ClientViewModel();
+
+            var client = await databaseContext.Clients.FirstOrDefaultAsync(c => c.Id == id);
+            if (client != null)
+            {
+                databaseContext.Clients.Remove(client);
+                databaseContext.SaveChanges();
+            }
+
+
+            return RedirectToAction("Index");
+        }
+
+
         private Client MapViewModelToClient(ClientViewModel clientViewModel)
         {
             return new Client
