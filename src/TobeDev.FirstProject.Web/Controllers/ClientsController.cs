@@ -22,9 +22,6 @@ namespace TobeDev.FirstProject.Web.Controllers
         {
             var clientListViewModel = new ClientListViewModel();
 
-            clientListViewModel.TobeDevTexto = "Mentoria Desenvolvedor C#";
-
-
             var clients = await databaseContext.Clients.ToListAsync();
             clientListViewModel.Clients = MapClientsToViewModel(clients);
 

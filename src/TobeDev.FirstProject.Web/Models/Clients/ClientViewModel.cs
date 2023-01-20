@@ -9,7 +9,7 @@ namespace TobeDev.FirstProject.Web.Models.Clients
 
 
 
-        [Required]
+        [Required(ErrorMessage = "O campo Nome é obrigatório")]
         [MaxLength(20)]
         [Display(Name = "Nome")]
         public string FirstName { get; set; }

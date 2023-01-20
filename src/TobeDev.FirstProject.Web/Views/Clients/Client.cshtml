@@ -1,26 +1,44 @@
 ﻿@using TobeDev.FirstProject.Web.Models.Clients;
 @model ClientViewModel
+
+
 <form asp-action="Client" method="POST" class="needs-validation" novalidate>
+
     <div class="row">
         <div class="mb-3 col-md-4 col-xs-12">
             <div class="form-group">
+
+
                 <label asp-for="FirstName"></label>
+                
                 <input class="form-control" asp-for="FirstName" />
                 <span asp-validation-for="FirstName"></span>
+
+
+
             </div>
         </div>
          <div class="mb-3 col-md-4 col-xs-12">
             <div class="form-group">
+
+
                 <label asp-for="LastName"></label>
                 <input class="form-control" asp-for="LastName" />
                 <span asp-validation-for="LastName"></span>
+
+
+
             </div>
         </div>
           <div class="mb-3 col-md-4 col-xs-12">
             <div class="form-group">
+
+
                 <label asp-for="BirthDate"></label>
                 <input class="form-control" asp-for="BirthDate" />
                 <span asp-validation-for="BirthDate"></span>
+
+
             </div>
         </div>
     </div>
