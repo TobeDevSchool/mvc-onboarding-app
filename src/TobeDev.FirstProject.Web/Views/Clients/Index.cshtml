@@ -3,9 +3,7 @@
 
 
 <h1>Lista de Clientes</h1>
-
-
-<h3>@Model.TobeDevTexto</h3>
+<a class="btn btn-primary" href="@Url.Action("Client","Clients",new {id = 0})">Adicionar Cliente</a>
 
 
 <div class="table-responsive">
@@ -29,7 +27,14 @@
                         <td>@client.FirstName</td>
                         <td>@client.LastName</td>
                         <td>@client.BirthDate</td>
-                        <td><a href="@Url.Action("Client","Clients",new {id = client.Id})" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                        <td>
+                            <a href="@Url.Action("Client","Clients",new {id = client.Id})" title="Editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="@Url.Action("Delete","Clients",new {id = client.Id})" title="Excluir">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                         </td>
                     </tr>
                 }
             }
