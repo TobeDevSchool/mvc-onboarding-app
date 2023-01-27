@@ -1,0 +1,40 @@
+@using TobeDev.FirstProject.Web.Models.Fornecedores;
+@model FornecedorViewModel
+
+<h1>Criar um novo Fornecedor</h1>
+<form asp-action="CreateFornecedor" method="POST" class="needs-validation" novalidate>
+
+    <div class="row">
+        <div class="mb-3 col-md-4 col-xs-12">
+            <div class="form-group">
+                <label asp-for="RazaoSocial"></label>
+
+                <input class="form-control" asp-for="RazaoSocial" />
+                <span asp-validation-for="RazaoSocial"></span>
+
+
+
+            </div>
+        </div>
+        <div class="mb-3 col-md-4 col-xs-12">
+            <div class="form-group">
+
+
+                <label asp-for="CNPJ"></label>
+                <input class="form-control" asp-for="CNPJ" />
+                <span asp-validation-for="CNPJ"></span>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn" asp-controller="Clients" asp-action="Index">Cancelar</a>
+</form>
+
+@section scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}

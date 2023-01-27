@@ -3,7 +3,7 @@
 
 
 <h1>Lista de Fornecedores</h1>
-<a class="btn btn-primary" href="@Url.Action("Fornecedor","Fornecedores",new {id = 0})">Adicionar Fornecedor</a>
+<a class="btn btn-primary" href="@Url.Action("Create","Fornecedores",new {id = 0})">Adicionar Fornecedor</a>
 
 
 <div class="table-responsive">
@@ -29,7 +29,7 @@
                             <a href="@Url.Action("Fornecedor","Fornecedores",new {id = fornecedor.Id})" title="Editar">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a href="@Url.Action("Fornecedor","Fornecedores",new {id = fornecedor.Id})" title="Excluir">
+                            <a href="@Url.Action("Delete","Fornecedores",new {id = fornecedor.Id})" title="Excluir">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
